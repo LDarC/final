@@ -16,7 +16,7 @@ class BooksController < ApplicationController
       @book = Book.find_by(id: params[:id])
  end
   
- def creat
+ def create
 	@book = Book.new(book_params)
    
     if @book.save
@@ -27,6 +27,17 @@ class BooksController < ApplicationController
         render :new
  end
  
+ def update
+      @book = Book.find_by(id: params[:id])
+
+      if @book.update(book_params)
+        # 成功
+        redirect_to books_path, notice: "update success!"
+      else
+        # 失敗
+        render :edit
+      end
+    end
    
    
    
