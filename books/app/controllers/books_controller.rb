@@ -4,6 +4,10 @@ class BooksController < ApplicationController
    @books = Book.all
  end
  
+ def show
+  @book = Book.show(id)
+ end
+   
  def new
 	@book = Book.new
  end
@@ -18,7 +22,8 @@ class BooksController < ApplicationController
         # 失敗
         render :new
  end
-  
+ 
+   
    
    private
     def book_params
