@@ -18,6 +18,7 @@
         <td><%= book.introduction %></td>
         <td><%= book.author %></td>
         <td><%= book.price %></td>
+        <td> <%= link_to "edit", edit_book_path(book) %></td>
       </tr>
       <% end %>
     </tbody>

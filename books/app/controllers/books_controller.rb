@@ -5,13 +5,17 @@ class BooksController < ApplicationController
  end
  
  def show
-  @book = Book.show(id)
+  @book = Book.find_by(id: params[:id])
  end
    
  def new
 	@book = Book.new
  end
 
+ def edit
+      @book = Book.find_by(id: params[:id])
+ end
+  
  def creat
 	@book = Book.new(book_params)
    
@@ -23,6 +27,7 @@ class BooksController < ApplicationController
         render :new
  end
  
+   
    
    
    private
