@@ -4,14 +4,14 @@
     <%= f.label :name, "姓名" %>
     <%= f.text_field :name %> <br />
 
-    <%= f.label :age, "學號" %>
-    <%= f.text_field :age %> <br />
+    <%= f.label :number, "學號" %>
+    <%= f.text_field :number %> <br />
 
-    <%= f.label :party, "成績" %>
-    <%= f.text_field :party %> <br />
+    <%= f.label :results, "成績" %>
+    <%= f.text_field :results %> <br />
 
     <%= f.submit %>
   <% end %>
 
   <br />
-  <%= link_to '回候學生列表', finals_path %>
+  <%= link_to '回候學生列表', final_path %>
